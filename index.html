@@ -199,15 +199,21 @@
                 <div class="get-card__form">
                     <form action="#" method="post">
                         <div class="form-group">
-                            <input type="text" class="form-control " name="fio" placeholder="Фамилия Имя Отчество"
-                                required="">
-                        </div>
-                        <div class="form-group">
                             <select id="inputState" class="form-control form-select" name="city_id" required="">
                                 <option selected="" disabled="">Выберите город</option>
                                 <option class="option" value="1">Душанбе</option>
                                 <option class="option" value="2">Худжанд</option>
                             </select>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control " name="fio" placeholder="Фамилия Имя Отчество"
+                                required="">
+                        </div>
+                        <div class="custom-file form-group">
+                            <input type="file" class=" custom-file-input form-control " id="inputFilePassport" required="">
+                            <label class="custom-file-label form-control " for="inputFilePassport">
+                                <span>Паспорт</span>
+                            </label>
                         </div>
                         <div class="form-group">
                             <input type="text" class="form-control " name="inn" placeholder="ИНН" required="">
