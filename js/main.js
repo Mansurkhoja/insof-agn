@@ -136,7 +136,7 @@
             Touchable
    --------------------*/
 
-  if (!"ontouchstart" in document.documentElement) {
+  if ("ontouchstart" in document.documentElement) {
     $(".action-link__title").addClass("show");
   } else {
     $(".action-link__title").removeClass("show");
