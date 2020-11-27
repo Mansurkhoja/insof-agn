@@ -2,8 +2,27 @@
 
 (function ($) {
   /*------------------
+           Smooth scroll
+  --------------------*/
+  $('body').scrollspy({
+    target: '.banner-btn',
+    offset: 99
+  });
+  $('.banner-btn a').on('click', function (event) {
+    if (this.hash !== "") {
+      event.preventDefault();
+      var hash = this.hash;
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function () {
+        window.location.hash = hash;
+      });
+    }
+  });
+  /*------------------
      Choose Language
   --------------------*/
+
   var chooseLang = $('.site-lang__current'),
       chooseLangInner = $('.site-lang__inner');
   chooseLang.on('click', function () {
