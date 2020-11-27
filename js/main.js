@@ -61,8 +61,6 @@
   $('#partner-slider').owlCarousel({
     loop: true,
     center: false,
-    // autoWidth:true, 
-    //autoplay: true,
     autoplayTimeout: 9999,
     autoplayHoverPause: true,
     dots: true,
@@ -83,35 +81,47 @@
         nav: false
       }
     }
-  }); // var howOpen = $('.how-open'),
-  //     howModal = $('.how-modal'),
-  //     mobMenu = $('.mobile-menu'),
-  //     burger = $('.burger');
-  // howOpen.on('click', function (e) {
-  //     howOpen.removeClass('show')
-  //     $(this).addClass('show')
+  });
+  $('#statistics-slider').owlCarousel({
+    dots: true,
+    // nav: true,
+    // navText: ['<span class="left"></span>', '<span class="right"></span>'],
+    items: 1
+  });
+  /*------------------
+         Tabpane
+  --------------------*/
+  // var navTab = $('#action-tab');
+
+  var tabs = $('[data-toggle="tab"]');
+  var profileItems = $('.profile__items');
+  tabs.on('click', function () {
+    profileItems.hide();
+  }); // for dropdown
+
+  $('.dropdown-menu-schedule').on('click', function (event) {
+    event.stopPropagation();
+  }); // $('.schedule-select').selectpicker({
+  //     container: 'body'
   // });
-  // $(document).mouseup(function (e) {
-  //     if (!howOpen.is(e.target) && howOpen.has(e.target).length === 0 &&
-  //         !howModal.is(e.target) && howModal.has(e.target).length === 0
-  //     ) {
-  //         howOpen.removeClass('show');
-  //     }
-  // });
-  // burger.on('click', function () {
-  //     mobMenu.toggleClass('open');
-  //     burger.toggleClass('open');
-  //     $('body').toggleClass('modal-open');
-  //     $('.fade-body').toggleClass('show');
-  // });
-  // $(document).mouseup(function (e) {
-  //     if (!burger.is(e.target) && burger.has(e.target).length === 0 &&
-  //         !mobMenu.is(e.target) && mobMenu.has(e.target).length === 0
-  //     ) {
-  //         mobMenu.removeClass('open');
-  //         burger.removeClass('open');
-  //         $('body').removeClass('modal-open');
-  //         $('.fade-body').removeClass('show');
-  //     }
-  // });
+
+  $('body').on('click', function (event) {
+    var target = $(event.target);
+
+    if (target.parents('.bootstrap-select').length) {
+      event.stopPropagation();
+      $('.bootstrap-select.open').removeClass('open');
+    }
+  });
+  /*------------------
+            Touchable
+   --------------------*/
+
+  if (!"ontouchstart" in document.documentElement) {
+    $(".action-link__title").addClass("show");
+  } else {
+    $(".action-link__title").removeClass("show");
+  }
+
+  ;
 })(jQuery);

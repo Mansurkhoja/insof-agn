@@ -16,11 +16,11 @@
         <nav class="navbar ">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="link-nav-mob active" href="index.html">О карте
+                    <a class="link-nav-mob active" href="about-card.html">О карте
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="link-nav-mob" href="traffic.html">Тарифы
+                    <a class="link-nav-mob" href="traffics.html">Тарифы
                     </a>
                 </li>
                 <li class="nav-item">
@@ -66,8 +66,8 @@
                 <div class="col-xl-7 col-lg-7 col-md-4 col-sm-4 col-3 d-flex">
                     <nav class="navbar navbar-expand d-lg-block d-none">
                         <ul class="navbar-nav">
-                            <li class="nav-item"><a class="link-nav active" href="index.html">О карте</a></li>
-                            <li class="nav-item"><a class="link-nav" href="traffic.html">Тарифы</a></li>
+                            <li class="nav-item"><a class="link-nav active" href="about-card.html">О карте</a></li>
+                            <li class="nav-item"><a class="link-nav" href="traffics.html">Тарифы</a></li>
                             <li class="nav-item"><a class="link-nav" href="faq.html">FAQ</a></li>
                             <li class="nav-item"><a class="link-nav" href="news.html">Новости</a></li>
                             <li class="nav-item"><a class="link-nav" href="partners.html">Партнеры</a></li>
@@ -100,7 +100,7 @@
                 </div>
             </div>
             <div class="header__banner row">
-                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 bannner-img">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 banner-img">
                     <picture>
                         <source media="(max-width:768px)" srcset="img/banner-mobile.webp" type="image/webp">
                         <source srcset="img/banner.webp" type="image/webp">
@@ -110,7 +110,7 @@
                     </picture>
                 </div>
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 banner-btn">
-                    <a href="#getCard" class="btn btn--link">Оформить карту</a>
+                    <a href="#getCardTitle" class="btn btn--link">Оформить карту</a>
                 </div>
             </div>
         </div>
@@ -180,7 +180,7 @@
     <section class="get-card">
         <div class="container">
             <div class="row get-card__inner justify-content-center">
-                <h2 class="get-card__title">
+                <h2 id="getCardTitle" class="get-card__title">
                     Получит карту INSOF
                 </h2>
                 <p class="get-card__text">
@@ -210,7 +210,8 @@
                                 required="">
                         </div>
                         <div class="custom-file form-group">
-                            <input type="file" class=" custom-file-input form-control " id="inputFilePassport" required="">
+                            <input type="file" class=" custom-file-input form-control " id="inputFilePassport"
+                                required="">
                             <label class="custom-file-label form-control " for="inputFilePassport">
                                 <span>Паспорт</span>
                             </label>
