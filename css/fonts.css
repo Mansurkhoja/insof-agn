@@ -1,15 +1,15 @@
 @font-face {
-    font-family: ArialTj;
-    src: url(../fonts/Arial_TJ.eot);
-    src: local("ArialTj"), url(../fonts/Arial_TJ.eot?#iefix) format("embedded-opentype"), url(../fonts/Arial_TJ.woff) format("woff"), url(../fonts/Arial_TJ.woff2) format("woff2"), url(../fonts/Arial_TJ.ttf) format("truetype");
+    font-family: Arial;
+    src: url(../fonts/arial.eot);
+    src: local("Arial"), url(../fonts/arial.eot?#iefix) format("embedded-opentype"), url(../fonts/arial.woff) format("woff"), url(../fonts/arial.woff2) format("woff2"), url(../fonts/arial.ttf) format("truetype");
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
-    font-family: ArialTj;
-    src: url(../fonts/Arial_TJ_Bold.eot);
-    src: local("Arial_TJ_Bold"), url(../fonts/Arial_TJ_Bold.eot?#iefix) format("embedded-opentype"), url(../fonts/Arial_TJ_Bold.woff) format("woff"), url(../fonts/Arial_TJ_Bold.woff2) format("woff2"), url(../fonts/Arial_TJ_Bold.ttf) format("truetype");
+    font-family: Arial;
+    src: url(../fonts/arialbold.eot);
+    src: local("Arial"), url(../fonts/arialbold.eot?#iefix) format("embedded-opentype"), url(../fonts/arialbold.woff) format("woff"), url(../fonts/arialbold.woff2) format("woff2"), url(../fonts/arialbold.ttf) format("truetype");
     font-weight: 600;
     font-style: normal;
 }

@@ -1,28 +1,39 @@
- 
-
-
 var ctxWeek = document.getElementById('chartByWeek').getContext('2d');
 var backgroundWeek = ctxWeek.createLinearGradient(0, 0, 0, 600);
 backgroundWeek.addColorStop(0, '#ff7655');
 backgroundWeek.addColorStop(1, '#ff2a48');
+var backgroundWeekHover = ctxWeek.createLinearGradient(0, 0, 0, 600);
+backgroundWeekHover.addColorStop(0, '#ff5830');
+backgroundWeekHover.addColorStop(1, '#e61230');
+
+var dataWeek = {
+    labels: ['Пн.', 'Вт.', 'Ср.', 'Чт.', 'Пт.', 'Сб.', 'Вс.'],
+    datasets: [{
+        label: 'Потрачено',
+        data: [10, 3, 7.3, 8, 2.5, 6, 7],
+        backgroundColor: [
+            backgroundWeek,
+            backgroundWeek,
+            backgroundWeek,
+            backgroundWeek,
+            backgroundWeek,
+            backgroundWeek,
+            backgroundWeek
+        ],
+        hoverBackgroundColor: [
+            backgroundWeekHover,
+            backgroundWeekHover,
+            backgroundWeekHover,
+            backgroundWeekHover,
+            backgroundWeekHover,
+            backgroundWeekHover,
+            backgroundWeekHover
+        ],
+    }]
+};
 var chartWeek = new Chart(ctxWeek, {
     type: 'bar',
-    data: {
-        labels: ['Пн.', 'Вт.', 'Ср.', 'Чт.', 'Пт.', 'Сб.', 'Вс.'],
-        datasets: [{
-            label: 'Потрачено',
-            data: [10, 3, 7.3, 8, 2.5, 6, 7],
-            backgroundColor: [
-                backgroundWeek,
-                backgroundWeek,
-                backgroundWeek,
-                backgroundWeek,
-                backgroundWeek,
-                backgroundWeek,
-                backgroundWeek
-            ]
-        }]
-    },
+    data: dataWeek,
     options: {
         legend: {
             display: false
@@ -109,33 +120,3 @@ var chartMonth = new Chart(document.getElementById('chartByMonth'), {
         }
     }
 });
-// var chartMonth = new Chart(ctxMonth, {
-//     type: 'doughnut',
-//     innerRadius:'75%',
-//     data: {
-//         labels: ['red', 'blue', 'yellow', 'green', 'purple', 'orange'],
-//         datasets: [{
-//             label: false,
-//             data: [12, 19, 3, 5, 2, 3],
-//             color: [
-//                 '#ff2a48',
-//                 'rgba(54, 162, 235, 1)',
-//                 'rgba(255, 206, 86, 1)',
-//                 'rgba(75, 192, 192, 1)',
-//                 'rgba(153, 102, 255, 1)',
-//                 'rgba(255, 159, 64, 1)'
-//             ],
-//             borderColor: [
-//                 'rgba(255, 255, 255, 1)',
-//                 'rgba(255, 255, 255, 1)',
-//                 'rgba(255, 255, 255, 1)',
-//                 'rgba(255, 255, 255, 1)',
-//                 'rgba(255, 255, 255, 1)',
-//                 'rgba(255, 255, 255, 1)'
-//             ],
-//             borderWidth: 1,
-//             cutoutPercentage: 70
-//         }]
-//     }
-
-// });

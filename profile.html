@@ -98,8 +98,16 @@
                                 <div class="profile__data profile__limit">100000</div>
                             </div>
                             <div class="profile__item">
-                                <div class="profile-label">Баланс</div>
-                                <div class="profile__data profile__limit">1000000</div>
+                                <div class="profile-label">Доступные средства</div>
+                                <div class="profile__data profile__access">1000000</div>
+                            </div>
+                            <div class="profile__item">
+                                <div class="profile-label">Долг</div>
+                                <div class="profile__data profile__owe">4567</div>
+                            </div>
+                            <div class="profile__item">
+                                <div class="profile-label">Долг</div>
+                                <div class="profile__data profile__repayment">222</div>
                             </div>
                             <div class="profile__item">
                                 <div class="profile-label">Дата списания</div>
@@ -109,8 +117,7 @@
                                 <span class="profile-label login-type__title">
                                     Форма входа:
                                 </span>
-                                <button type="button" class="btn btn-toggle" data-toggle="button" aria-pressed="false"
-                                    autocomplete="off">
+                                <button type="button" class="btn btn-toggle" data-toggle="button" aria-pressed="false">
                                     <span class="selectball"></span>
                                 </button>
                                 <div class="select-type__form">
@@ -145,8 +152,8 @@
                                                     <span> Период совершенных операций</span>
                                                     <span class="icon-filter"></span>
                                                 </button>
-                                                <div class="dropdown-menu dropdown-menu-schedule menu-period special-scroll"
-                                                    aria-labelledby="dropdownMenuButton">
+                                                <div
+                                                    class="dropdown-menu dropdown-menu-schedule menu-period special-scroll">
                                                     <div class="dropdown-item">Выбор даты</div>
                                                     <div class="dropdown-form d-flex justify-content-between">
                                                         <input type="text" class="form-control form-schedule" value=""
@@ -203,8 +210,7 @@
                                                     Статус операций
                                                     <span class="icon-filter"></span>
                                                 </button>
-                                                <div class="dropdown-menu dropdown-menu-schedule special-scroll"
-                                                    aria-labelledby="dropdownMenuButton">
+                                                <div class="dropdown-menu dropdown-menu-schedule special-scroll">
                                                     <div class="dropdown-item">
                                                         <input type="checkbox" name="check"
                                                             class="checkbox-custom__input " id="action-check-all">
@@ -351,6 +357,23 @@
                                                 -220,20 сомони
                                             </span>
                                         </div>
+                                        <div class="story__item">
+                                            <div class="story__place">
+                                                Оплата в Супермаркет Tim
+                                            </div>
+                                            <div class="story__pay-by">
+                                                Оплата с кошелька
+                                            </div>
+                                            <span class="story__date">
+                                                14.09.20
+                                            </span>
+                                            <span class="story__time">
+                                                21:50
+                                            </span>
+                                            <span class="story__spent">
+                                                -220,20 сомони
+                                            </span>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="add-money tab-pane fade" id="action-add-money" role="tabpanel"
@@ -399,26 +422,38 @@
                                     aria-labelledby="action-statistics-tab">
                                     <div class="action-filter">
                                         <div class="special__title">Статистика </div>
-                                        <div class="dropdown action-filter">
+                                        <div class="dropdown dropdown-statistics">
                                             <button class="btn btn-filter dropdown-toggle" type="button"
                                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                Выбрать месяц
+                                                <span> Выборать дату</span>
                                                 <span class="icon-filter"></span>
                                             </button>
-                                            <div class="dropdown-menu special-scroll"
-                                                aria-labelledby="dropdownMenuButton">
-                                                <div class="dropdown-item">Январь</div>
-                                                <div class="dropdown-item">Февраль</div>
-                                                <div class="dropdown-item">Март</div>
-                                                <div class="dropdown-item">4</div>
-                                                <div class="dropdown-item">5</div>
-                                                <div class="dropdown-item">6</div>
-                                                <div class="dropdown-item">7</div>
-                                                <div class="dropdown-item">8</div>
-                                                <div class="dropdown-item">9</div>
-                                                <div class="dropdown-item">10</div>
-                                                <div class="dropdown-item">11</div>
-                                                <div class="dropdown-item">12</div>
+                                            <div
+                                                class="dropdown-menu dropdown-menu-schedule menu-period special-scroll">
+                                                <div class="dropdown-item">Выбор даты</div>
+                                                <div class="dropdown-form d-flex justify-content-between">
+                                                    <input type="text" class="form-control form-schedule" value=""
+                                                        maxlength="2" placeholder="День">
+                                                    <select
+                                                        class="form-select form-control form-schedule schedule-select"
+                                                        name="schedule-month">
+                                                        <option selected="" disabled="">Месяц</option>
+                                                        <option class="option" value="1">Январь</option>
+                                                        <option class="option" value="2">Февраль</option>
+                                                        <option class="option" value="3">Март</option>
+                                                        <option class="option" value="4">Апрель</option>
+                                                        <option class="option" value="5">Май</option>
+                                                        <option class="option" value="6">Июнь</option>
+                                                        <option class="option" value="7">Июль</option>
+                                                        <option class="option" value="8">Август</option>
+                                                        <option class="option" value="9">Сентябрь</option>
+                                                        <option class="option" value="10">Октябрь</option>
+                                                        <option class="option" value="11">Ноябрь</option>
+                                                        <option class="option" value="12">Декабрь</option>
+                                                    </select>
+                                                    <input type="text" class="form-control form-schedule" value=""
+                                                        maxlength="4" placeholder="Год">
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -428,7 +463,7 @@
                                                 <figcaption class="chart__caption">
                                                     <span id="month">Июль 2020</span>
                                                 </figcaption>
-                                                <canvas id="chartByMonth" role="chart" width="240" height="240">
+                                                <canvas id="chartByMonth" width="240" height="240">
                                                     Обновите браузер
                                                 </canvas>
                                             </figure>
@@ -465,7 +500,7 @@
                                                 <figcaption class="chart__caption">
                                                     <span class="minus" id="minus">-1,8%</span> -5 ноя -11 ноя
                                                 </figcaption>
-                                                <canvas id="chartByWeek" role="chart" width="240" height="240">
+                                                <canvas id="chartByWeek" width="240" height="240">
                                                     Обновите браузер
                                                 </canvas>
                                             </figure>
@@ -481,7 +516,7 @@
                 </div>
                 <div class="special__actions-nav col-xl-7 col-lg-7 col-md-12">
                     <div class="profile-actions-nav bg-card">
-                        <nav class="nav actions-nav d-inline-flex justify-content-around" id="action-tab"
+                        <div class="nav actions-nav d-inline-flex justify-content-around" id="action-tab"
                             role="tablist">
                             <a class="action-link bg-card" id="action-schedule-tab" data-toggle="tab"
                                 href="#action-schedule" title="График" role="tab" aria-controls="action-schedule"
@@ -513,7 +548,7 @@
                                     Статистика
                                 </div>
                             </a>
-                        </nav>
+                        </div>
                         <div class="social-media">
                             <a href="#" class="social-media__link">
                                 <svg class="social-media__icon">

@@ -2,7 +2,7 @@
 
 (function ($) {
   /*------------------
-           Smooth scroll
+      Smooth scroll
   --------------------*/
   $('body').scrollspy({
     target: '.banner-btn',
@@ -105,12 +105,12 @@
     dots: true,
     // nav: true,
     // navText: ['<span class="left"></span>', '<span class="right"></span>'],
-    items: 1
+    items: 1,
+    autoHeight: true
   });
   /*------------------
          Tabpane
   --------------------*/
-  // var navTab = $('#action-tab');
 
   var tabs = $('[data-toggle="tab"]');
   var profileItems = $('.profile__items');
@@ -133,6 +133,27 @@
     }
   });
   /*------------------
+           Btn-about
+   --------------------*/
+
+  var btnAbout = $('.btn-about'),
+      aboutCard = $('.about-card__item');
+  btnAbout.on('click', function () {
+    var closest = $(this).closest('.about-card__item');
+
+    if (closest.hasClass('show')) {
+      closest.removeClass('show');
+    } else {
+      aboutCard.removeClass('show');
+      closest.addClass('show');
+    }
+  });
+  $(document).mouseup(function (e) {
+    if (!btnAbout.is(e.target) && btnAbout.has(e.target).length === 0 && !aboutCard.is(e.target) && aboutCard.has(e.target).length === 0) {
+      aboutCard.removeClass('show');
+    }
+  });
+  /*------------------
             Touchable
    --------------------*/
 
@@ -143,4 +164,14 @@
   }
 
   ;
+  var tabNav = $('#action-tab').children();
+  tabNav.on('click', function (e) {
+    if ($(this).attr('id') == 'action-schedule-tab') {
+      $('.profile__inner').addClass('col-full');
+      $('.special__img').addClass('img-hide');
+    } else {
+      $('.profile__inner').removeClass('col-full');
+      $('.special__img').removeClass('img-hide');
+    }
+  });
 })(jQuery);
