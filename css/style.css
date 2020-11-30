@@ -334,10 +334,6 @@ body.modal-open-noscroll {
   padding: 1.5rem 0;
 }
 
-.logo {
-  display: inline-block;
-}
-
 .logo__insof {
   width: 137px;
   height: 37px;
@@ -904,8 +900,8 @@ body.modal-open-noscroll {
   position: absolute;
   font-size: 0.875rem;
   bottom: -22px;
-  width: 75px;
-  left: 0;
+  width: 80px;
+  left: -16px;
   text-align: center;
 }
 
@@ -1569,9 +1565,14 @@ body.modal-open-noscroll {
 }
 
 .about-card__item-img {
+  margin: 0 auto 20px;
+}
+
+.about-card__item-img img {
   width: 200px;
   height: 200px;
-  margin: 0 auto 20px;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .about-card__img {
@@ -2259,7 +2260,7 @@ body.modal-open-noscroll {
     padding: 30px 15px;
     margin: 20px;
   }
-  .about-card__item-img {
+  .about-card__item-img img {
     width: 150px;
     height: 150px;
   }
@@ -2361,7 +2362,9 @@ body.modal-open-noscroll {
   }
   .logo__insof {
     width: 87px;
-    height: 27px;
+    height: auto;
+    display: -ms-grid;
+    display: grid;
   }
   .site-lang__current {
     font-size: 12px;
@@ -2394,9 +2397,11 @@ body.modal-open-noscroll {
     padding: 0 0 20px 0;
   }
   .about-card__item-img {
+    margin: 0 auto 10px;
+  }
+  .about-card__item-img img {
     width: 100px;
     height: 100px;
-    margin: 0 auto 10px;
   }
   .about-card__img {
     width: 100%;
@@ -2476,6 +2481,9 @@ body.modal-open-noscroll {
     margin: 0 0 20px 0;
     font-size: 2rem;
   }
+  .footer__link {
+    font-size: 1.1rem;
+  }
   .footer__copy {
     margin-top: 30px;
   }
@@ -2483,7 +2491,7 @@ body.modal-open-noscroll {
     font-size: 26px;
   }
   .special__box {
-    padding: 17px 20px;
+    padding: 17px 20px 25px;
   }
   .special__card {
     font-size: 1rem;
