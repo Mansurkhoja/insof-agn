@@ -293,7 +293,8 @@
                                             <span class="bottom"></span>
                                             <select id="getCardFilial" class="form-control form-select" name="filial"
                                                 required="">
-                                                <option selected="" disabled="" value="">Выбрать из списка филиалов</option>
+                                                <option selected="" disabled="" value="">Выбрать из списка филиалов
+                                                </option>
                                                 <option class="option" value="1">filial 1</option>
                                                 <option class="option" value="2">filial 2</option>
                                             </select>
@@ -513,6 +514,120 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn--gradient btn--sign-in">Далее</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="chat">
+        <div class="chat-open">
+            <button class="btn chat-btn chat-toggle">
+                <svg class="chat-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    viewBox="0 0 200 200">
+                    <defs>
+                        <linearGradient id="gradientone" x1="308.10248" y1="-16.10458" x2="555.26246" y2="231.05543"
+                            gradientTransform="translate(-0.41621 315.17249)" gradientUnits="userSpaceOnUse">
+                            <stop offset="0" stop-color="#ff963c" />
+                            <stop offset="1" stop-color="#ffd155" />
+                        </linearGradient>
+                        <linearGradient id="gradienttwo" x1="130.58096" y1="-132.17307" x2="391.53096" y2="128.77694"
+                            gradientTransform="translate(-0.41621 315.17249)" gradientUnits="userSpaceOnUse">
+                            <stop offset="0" stop-color="#ffa555" />
+                            <stop offset="1" stop-color="#ffda55" />
+                        </linearGradient>
+                    </defs>
+                    <path
+                        d="M132.955,64.11451a66.06659,66.06659,0,0,1,65.496,80.28581,119.72286,119.72286,0,0,0-2.98086,25.77925V186.9561a4.65387,4.65387,0,0,1-4.6539,4.6539H174.03967a119.72286,119.72286,0,0,0-25.77925,2.98086A66.02265,66.02265,0,1,1,132.955,64.11451Z"
+                        fill="url(#gradientone)" />
+                    <path
+                        d="M81.6785,3.87087a80.48426,80.48426,0,0,0-79.79167,97.8096,145.86831,145.86831,0,0,1,3.63125,31.40619v20.43825a5.66987,5.66987,0,0,0,5.66991,5.66991H31.62624a145.8746,145.8746,0,0,1,31.40619,3.63124A80.43333,80.43333,0,1,0,81.6785,3.87087Z"
+                        fill="url(#gradienttwo)" />
+                    <circle cx="42.57231" cy="88.50197" r="12.4574" fill="#fff" />
+                    <circle cx="77.8035" cy="88.50197" r="12.4574" fill="#fff" />
+                    <circle cx="113.03508" cy="88.50197" r="12.4574" fill="#fff" />
+                </svg>
+                <!-- <span class="chat-open-text">Напишите нам сообщение</span> -->
+            </button>
+        </div>
+        <div class="chat-content">
+            <div class="chat-header">
+                <div class="chat-operator">
+                    <div class="operator-img">
+                        <img src="img/partner-logo.png" alt="logo">
+                    </div>
+                    <div class="opertor-data">
+                        <div class="operator-name">
+                            name surname
+                        </div>
+                        <div class="operator-status">
+                            new operator
+                        </div>
+                    </div>
+
+                </div>
+                <div class="chat-close">
+                    <button class="btn chat-btn chat-btn--close chat-toggle">
+                        <svg class="chat-icon-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none">
+                            <path class="cls-1" d="M11.84443,10l7.77344-7.77344A1.30421,1.30421,0,1,0,17.77344.38213L10,8.15557,2.22656.38213A1.30421,1.30421,0,0,0,.38213,2.22656L8.15557,10,.38213,17.77344a1.30421,1.30421,0,1,0,1.84443,1.84443L10,11.84443l7.77344,7.77344a1.30421,1.30421,0,1,0,1.84443-1.84443Z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="chat-body special-scroll">
+                <div class="chat-hi">
+                    asdads
+                </div>
+                <div class="chat-form active">
+                    <form action="#">
+                        <div class="form-group">
+                            <input class="form-control" type="text" name="chatname" id="chatname" placeholder="Ваше Имя">
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" type="tel" name="chatphone" id="chatphone" placeholder="Ваш телефон">
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" type="email" name="chatemail" id="chatemail" placeholder="Ваш e-mail">
+                        </div>
+                        <div class="chat-form-btn">
+                            <button type="submit" class="btn chat-btn chat-btn--send" id="cardSubmit">
+                                <svg class="chat-icon-send" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                    <path
+                                        d="M19.40933,8.41035,12.70172.61715A1.31937,1.31937,0,0,0,10.80643.49491,1.39826,1.39826,0,0,0,10.68707,2.436L16.0223,8.63463l-14.677-.02547H1.3431a1.376,1.376,0,0,0-.00219,2.75117l14.67368.02508L10.66,17.56032a1.39856,1.39856,0,0,0,.11236,1.94158,1.32051,1.32051,0,0,0,1.89617-.11463l6.73647-7.769A2.46617,2.46617,0,0,0,19.40933,8.41035Z" />
+                                </svg>
+                            </button>
+                        </div>
+                       
+                    </form>
+                </div>
+                <div class="chat-message chat-message-customer">
+                    <p class="chat-text">ss</p>
+                    <p class="chat-text">ss</p>
+                    <div class="chat-time">
+                        13:26
+                    </div>
+                </div>
+                <div class="chat-message chat-message-operator">
+                    <p class="chat-text">ss</p>
+                    <p class="chat-text">ss</p>
+                    <p class="chat-text">ss</p>
+                    <p class="chat-text">ss</p>
+                    <p class="chat-text">ss</p>
+                    <p class="chat-text">ss</p>
+                    <p class="chat-text">ss</p>
+                    <div class="chat-time">
+                        13:26
+                    </div>
+                </div>
+            </div>
+            <div class="chat-footer">
+                <textarea tabindex="-1" class="special-scroll chat-textarea" name="chat-textarea" id="chat-textarea"
+                    placeholder="Введите сообщение" maxlength="999"></textarea>
+                <div class="chat-send">
+                    <button class="btn chat-btn chat-btn--send">
+                        <svg class="chat-icon-send" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                            <path
+                                d="M19.40933,8.41035,12.70172.61715A1.31937,1.31937,0,0,0,10.80643.49491,1.39826,1.39826,0,0,0,10.68707,2.436L16.0223,8.63463l-14.677-.02547H1.3431a1.376,1.376,0,0,0-.00219,2.75117l14.67368.02508L10.66,17.56032a1.39856,1.39856,0,0,0,.11236,1.94158,1.32051,1.32051,0,0,0,1.89617-.11463l6.73647-7.769A2.46617,2.46617,0,0,0,19.40933,8.41035Z" />
+                        </svg>
+                    </button>
                 </div>
             </div>
         </div>
